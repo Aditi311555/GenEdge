@@ -196,6 +196,16 @@ export default function LandingPage() {
               with AI-powered guidance.
             </p>
 
+            <Link href="/ai-cover-letter" passHref>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="h-11 mt-5 animate-bounce"
+              >
+                Start Your Journey Today <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+
           </div>
         </div>
       </section>
