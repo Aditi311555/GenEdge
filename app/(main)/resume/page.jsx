@@ -6,6 +6,8 @@ import dynamic from "next/dynamic";
 import { getResume } from "@/actions/resume";
 import { getUserOnboardingStatus } from "@/actions/user";
 import { redirect } from "next/navigation";
+import ResumeBuilderWrapper from "./resume-builder-wrapper";
+
 
 
 const ResumeBuilder = dynamic(() => import("./_components/resume-builder"), {
