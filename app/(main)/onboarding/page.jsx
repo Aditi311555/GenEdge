@@ -12,13 +12,9 @@ export default async function OnboardingPage() {
 
   return (
     <div className="container mx-auto py-10">
+      <h1 className="text-white text-2xl mb-4">Onboarding Page</h1>
       <OnboardingForm industries={industries} />
     </div>
   );
 }
-return (
-  <div className="container mx-auto py-10">
-    <h1 className="text-white text-2xl mb-4">Onboarding Page</h1>
-    <OnboardingForm industries={industries} />
-  </div>
-);
+
