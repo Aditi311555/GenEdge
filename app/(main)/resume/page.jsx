@@ -1,16 +1,20 @@
 
 
 
+
+import dynamic from "next/dynamic";
 import { getResume } from "@/actions/resume";
-import ResumeBuilder from "./_components/resume-builder";
 import { getUserOnboardingStatus } from "@/actions/user";
 import { redirect } from "next/navigation";
 
+
+const ResumeBuilder = dynamic(() => import("./_components/resume-builder"), {
+  ssr: false,
+});
+
 export default async function ResumePage() {
-  // ✅ Check if user has completed onboarding
   const { isOnboarded } = await getUserOnboardingStatus();
 
-  // ✅ Redirect to onboarding if not done
   if (!isOnboarded) {
     redirect("/onboarding");
   }
@@ -23,3 +27,4 @@ export default async function ResumePage() {
     </div>
   );
 }
+
